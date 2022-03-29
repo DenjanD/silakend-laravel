@@ -11,13 +11,13 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 class DebugController extends Controller
 {
     public function debug () {
-        $this->guard()->attempt([
+        $token = $this->guard()->attempt([
             'email' => 'driver@example.com',
             'password' => '123'
         ]);
         $userRole = Role::findOrFail(JWTAuth::user()->role_id)->level;
 
-        return $userRole;
+        return $token;
     }
 
     private function guard()

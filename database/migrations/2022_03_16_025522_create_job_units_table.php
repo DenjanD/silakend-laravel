@@ -18,6 +18,7 @@ class CreateJobUnitsTable extends Migration
             $table->string('name');
             $table->string('unit_account');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->foreignUuid('unit_id')->references('unit_id')->on('job_units')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
-
+            $table->softDeletes();
             
         });
     }

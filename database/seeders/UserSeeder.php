@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
         User::create(
             [
                 'nip' => '111111',
-                'password' => Hash::make('123'),
+                'password' => '123',
                 'name' => 'SuperAdmin',
                 'address' => 'Home',
                 'phone' => '23131321321',
@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
         User::create(
             [
                 'nip' => '222222',
-                'password' => Hash::make('123'),
+                'password' => '123',
                 'name' => 'PIC',
                 'address' => 'Home',
                 'phone' => '23131321321',
@@ -44,7 +44,7 @@ class UserSeeder extends Seeder
         User::create(
             [
                 'nip' => '333333',
-                'password' => Hash::make('123'),
+                'password' => '123',
                 'name' => 'Unit Head',
                 'address' => 'Home',
                 'phone' => '23131321321',
@@ -56,7 +56,7 @@ class UserSeeder extends Seeder
         User::create(
             [
                 'nip' => '444444',
-                'password' => Hash::make('123'),
+                'password' => '123',
                 'name' => 'Unit Member',
                 'address' => 'Home',
                 'phone' => '23131321321',
@@ -68,7 +68,7 @@ class UserSeeder extends Seeder
         User::create(
             [
                 'nip' => '555555',
-                'password' => Hash::make('123'),
+                'password' => '123',
                 'name' => 'Driver',
                 'address' => 'Home',
                 'phone' => '23131321321',
@@ -80,7 +80,7 @@ class UserSeeder extends Seeder
         User::create(
             [
                 'nip' => '666666',
-                'password' => Hash::make('123'),
+                'password' => '123',
                 'name' => 'Officer',
                 'address' => 'Home',
                 'phone' => '23131321321',

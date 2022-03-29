@@ -23,6 +23,7 @@ class CreateVehiclesTable extends Migration
             $table->integer('distance_count');
             $table->foreignUuid('vcategory_id')->references('vcategory_id')->on('vehicle_categories')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

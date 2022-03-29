@@ -21,6 +21,7 @@ class CreateVehicleMaintenancesTable extends Migration
             $table->integer('total_cost');
             $table->foreignUuid('vehicle_id')->references('vehicle_id')->on('vehicles')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

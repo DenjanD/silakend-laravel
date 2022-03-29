@@ -17,6 +17,7 @@ class CreateUsageCategoriesTable extends Migration
             $table->uuid('ucategory_id')->primary();
             $table->string('name');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

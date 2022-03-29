@@ -17,6 +17,7 @@ class CreateVehicleCategoriesTable extends Migration
             $table->uuid('vcategory_id')->primary();
             $table->string('name');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

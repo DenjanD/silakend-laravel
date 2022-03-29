@@ -31,6 +31,7 @@ class CreateVehicleUsagesTable extends Migration
             $table->foreignUuid('user_id')->references('user_id')->on('users')->onDelete('cascade');
             $table->foreignUuid('ucategory_id')->references('ucategory_id')->on('usage_categories')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
