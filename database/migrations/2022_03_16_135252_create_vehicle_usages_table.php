@@ -22,12 +22,12 @@ class CreateVehicleUsagesTable extends Migration
             $table->dateTime('departure')->nullable();
             $table->dateTime('arrival')->nullable();
             $table->string('status');
-            $table->integer('distance_count_out');
-            $table->integer('distance_count_in');
+            $table->integer('distance_count_out')->nullable();
+            $table->integer('distance_count_in')->nullable();
             $table->text('status_description')->nullable();
-            $table->foreignUuid('vehicle_id')->references('vehicle_id')->on('vehicles')->onDelete('cascade')->nullable();
-            $table->foreignUuid('acceptor_id')->references('user_id')->on('users')->onDelete('cascade')->nullable();
-            $table->foreignUuid('driver_id')->references('user_id')->on('users')->onDelete('cascade')->nullable();
+            $table->foreignUuid('vehicle_id')->nullable()->references('vehicle_id')->on('vehicles')->onDelete('cascade');
+            $table->foreignUuid('acceptor_id')->nullable()->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreignUuid('driver_id')->nullable()->references('user_id')->on('users')->onDelete('cascade');
             $table->foreignUuid('user_id')->references('user_id')->on('users')->onDelete('cascade');
             $table->foreignUuid('ucategory_id')->references('ucategory_id')->on('usage_categories')->onDelete('cascade');
             $table->timestamps();

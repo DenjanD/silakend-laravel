@@ -25,8 +25,8 @@ class RoleCheck
         $roles = [
             'Superadmin' => ['1'],
             'PIC' => ['1','2'],
-            'Unit Head' => ['1','2','3'],
-            'Unit Member' => ['1','2','3','4'],
+            'UnitHead' => ['1','2','3'],
+            'UnitMember' => ['1','2','3','4'],
             'Driver' => ['1','2','3','4','5'],
             'Officer' => ['1','2','3','4','5','6']
         ];

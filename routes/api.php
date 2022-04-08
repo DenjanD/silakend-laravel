@@ -39,8 +39,8 @@ Route::prefix('v1')->group(function () {
     });
 
     //SuperAdmin APIs
-    Route::prefix('1')->group(function () {
-        Route::middleware(['auth:api','rolecheck:Superadmin'])->group(function () {
+    Route::middleware(['auth:api','rolecheck:Superadmin'])->group(function () {
+        Route::prefix('master')->group(function () {
 
             Route::prefix('roles')->group(function () {
                 //Roles APIs
@@ -121,6 +121,17 @@ Route::prefix('v1')->group(function () {
                 Route::post('/', [App\Http\Controllers\SuperAdmin\VehicleMaintenanceDetailsController::class, 'store']);
                 Route::put('/{id}', [App\Http\Controllers\SuperAdmin\VehicleMaintenanceDetailsController::class, 'update']);
                 Route::delete('/{id}', [App\Http\Controllers\SuperAdmin\VehicleMaintenanceDetailsController::class, 'destroy']);
+            });
+        });  
+    });
+    
+    Route::prefix('transaction')->group(function () {
+        Route::middleware(['auth:api','rolecheck:UnitMember'])->group(function () {
+            Route::prefix('usages')->group(function () {
+                Route::get('/', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'index']);
+                Route::get('/{id}', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'show']);
+                Route::post('/', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'store']);
+                Route::put('/{id}', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'update']);
             });
         });
     });
