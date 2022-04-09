@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\UnitMember;
+namespace App\Http\Requests\UnitHead;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VehicleUsageRequest extends FormRequest
+class VehicleUsageStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,13 +30,13 @@ class VehicleUsageRequest extends FormRequest
             'destination' => 'required',
             'departure' => 'prohibited',
             'arrival' => 'prohibited',
-            'status' => 'required|in:WAITING,CANCELED',
+            'status' => 'required|in:ACCEPTED,CANCELED',
             'distance_count_out' => 'prohibited',
             'distance_count_in' => 'prohibited',
             'status_description' => 'prohibited',
             'vehicle_id' => 'prohibited',
             'driver_id' => 'prohibited',
-            'acceptor_id' => 'prohibited',
+            'acceptor_id' => 'required',
             'user_id' => 'required|exists:users',
             'ucategory_id' => 'required|exists:usage_categories',
         ];

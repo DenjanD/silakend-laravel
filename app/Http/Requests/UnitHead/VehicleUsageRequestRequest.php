@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\UnitMember;
+namespace App\Http\Requests\UnitHead;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VehicleUsageRequest extends FormRequest
+class VehicleUsageRequestRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,21 +24,21 @@ class VehicleUsageRequest extends FormRequest
     public function rules()
     {
         return [
-            'description' => 'required|string',
-            'personel_count' => 'required|integer|min:0',
-            'origin' => 'required',
-            'destination' => 'required',
+            'description' => 'prohibited',
+            'personel_count' => 'prohibited',
+            'origin' => 'prohibited',
+            'destination' => 'prohibited',
             'departure' => 'prohibited',
             'arrival' => 'prohibited',
-            'status' => 'required|in:WAITING,CANCELED',
+            'status' => 'required|in:ACCEPTED,REJECTED',
             'distance_count_out' => 'prohibited',
             'distance_count_in' => 'prohibited',
-            'status_description' => 'prohibited',
+            'status_description' => 'nullable',
             'vehicle_id' => 'prohibited',
             'driver_id' => 'prohibited',
-            'acceptor_id' => 'prohibited',
-            'user_id' => 'required|exists:users',
-            'ucategory_id' => 'required|exists:usage_categories',
+            'acceptor_id' => 'required',
+            'user_id' => 'prohibited',
+            'ucategory_id' => 'prohibited',
         ];
     }
 }

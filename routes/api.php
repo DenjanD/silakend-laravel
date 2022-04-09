@@ -126,12 +126,23 @@ Route::prefix('v1')->group(function () {
     });
     
     Route::prefix('transaction')->group(function () {
-        Route::middleware(['auth:api','rolecheck:UnitMember'])->group(function () {
+        Route::middleware(['auth:api','rolecheck:UnitMember'])->prefix('um')->group(function () {
             Route::prefix('usages')->group(function () {
                 Route::get('/', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'index']);
                 Route::get('/{id}', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'show']);
                 Route::post('/', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'store']);
                 Route::put('/{id}', [App\Http\Controllers\UnitMember\VehicleUsagesController::class, 'update']);
+            });
+        });
+
+        Route::middleware(['auth:api','rolecheck:UnitHead'])->prefix('uh')->group(function () {
+            Route::prefix('usages')->group(function () {
+                Route::get('/', [App\Http\Controllers\UnitHead\VehicleUsagesController::class, 'index']);
+                Route::get('/request', [App\Http\Controllers\UnitHead\VehicleUsagesController::class, 'request']);
+                Route::put('/verify/{id}', [App\Http\Controllers\UnitHead\VehicleUsagesController::class, 'verify']);
+                Route::get('/{id}', [App\Http\Controllers\UnitHead\VehicleUsagesController::class, 'show']);
+                Route::post('/', [App\Http\Controllers\UnitHead\VehicleUsagesController::class, 'store']);
+                Route::put('/{id}', [App\Http\Controllers\UnitHead\VehicleUsagesController::class, 'update']);
             });
         });
     });
