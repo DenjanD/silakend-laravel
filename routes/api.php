@@ -192,6 +192,17 @@ Route::prefix('v1')->group(function () {
             });
         });
     });
+
+    //Officer APIs
+    Route::middleware(['auth:api','rolecheck:Officer'])->prefix('officer')->group(function () {
+        Route::prefix('transaction')->group(function () {   
+            Route::prefix('usages')->group(function () {
+                Route::get('/', [App\Http\Controllers\Officer\VehicleUsagesController::class, 'index']);
+                Route::get('/{id}', [App\Http\Controllers\Officer\VehicleUsagesController::class, 'show']);
+                Route::put('/{id}', [App\Http\Controllers\Officer\VehicleUsagesController::class, 'update']);
+            });
+        });
+    });
 });
 
 /*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
