@@ -181,6 +181,17 @@ Route::prefix('v1')->group(function () {
             });
         });
     });
+
+    //Driver APIs
+    Route::middleware(['auth:api','rolecheck:Driver'])->prefix('driver')->group(function () {
+        Route::prefix('transaction')->group(function () {   
+            Route::prefix('usages')->group(function () {
+                Route::get('/', [App\Http\Controllers\Driver\VehicleUsagesController::class, 'index']);
+                Route::get('/{id}', [App\Http\Controllers\Driver\VehicleUsagesController::class, 'show']);
+                Route::put('/{id}', [App\Http\Controllers\Driver\VehicleUsagesController::class, 'update']);
+            });
+        });
+    });
 });
 
 /*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
