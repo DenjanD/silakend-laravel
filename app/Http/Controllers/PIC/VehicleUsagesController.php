@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\UnitHead;
+namespace App\Http\Controllers\PIC;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\UnitHead\VehicleUsageStoreRequest;
-use App\Http\Requests\UnitHead\VehicleUsageRequestRequest;
+use App\Http\Requests\PIC\VehicleUsageStoreRequest;
+use App\Http\Requests\PIC\VehicleUsageRequestRequest;
 use App\Models\VehicleUsage;
 use Validator;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -26,9 +26,7 @@ class VehicleUsagesController extends Controller
 
     public function request()
     {
-        $data = VehicleUsage::whereHas('user', function ($query) {
-                                return $query->where('unit_id', '=', JWTAuth::user()->unit_id);
-                            })->get();
+        $data = VehicleUsage::where('acceptor_id','!=',null)->where('status','ACCEPTED')->get();
 
         return response()->json(['data' => $data], 200);
     }
@@ -106,10 +104,7 @@ class VehicleUsagesController extends Controller
     public function verify(VehicleUsageRequestRequest $request, $id) {
         $verifyData = VehicleUsage::findOrFail($id);
 
-        $verifyData->status = $request->input('status');
-        $verifyData->status_description = $request->input('status_description');
-        $verifyData->acceptor_id = JWTAuth::user()->user_id;
-        if ($verifyData->update()) {
+        if ($verifyData->update($request->validated())) {
             return response()->json(['status' => 'Verify success'], 200); 
         }
 
