@@ -30,7 +30,7 @@ class VehicleUsageRequest extends FormRequest
             'destination' => 'prohibited',
             'departure' => 'prohibited',
             'arrival' => 'nullable',
-            'status' => 'required|in:FINISHED',
+            'status' => 'nullable',
             'distance_count_out' => 'prohibited',
             'distance_count_in' => 'required',
             'status_description' => 'prohibited',

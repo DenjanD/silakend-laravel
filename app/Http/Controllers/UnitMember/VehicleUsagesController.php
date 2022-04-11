@@ -78,12 +78,12 @@ class VehicleUsagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(VehicleUsageRequest $request, $id)
+    public function update(Request $request, $id)
     {    
         $cancelData = VehicleUsage::findOrFail($id);
 
         if ($cancelData->user_id == JWTAuth::user()->user_id) {
-            $cancelData->status = 'CANCEL';
+            $cancelData->status = 'CANCELED';
             if ($cancelData->update() && $cancelData->delete()) {
                 return response()->json(['status' => 'Cancel success'], 200); 
             }
