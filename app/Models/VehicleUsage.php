@@ -40,7 +40,8 @@ class VehicleUsage extends Model
         'driver_id',
         'acceptor_id',
         'user_id',
-        'ucategory_id'
+        'ucategory_id',
+        'officer_id'
     ];
 
     public function vehicle() {
@@ -53,6 +54,10 @@ class VehicleUsage extends Model
 
     public function acceptor() {
         return $this->hasOne(User::class, 'acceptor_id', 'user_id');
+    }
+
+    public function officer() {
+        return $this->hasOne(User::class, 'officer_id', 'user_id');
     }
 
     public function user() {

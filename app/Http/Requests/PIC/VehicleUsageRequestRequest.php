@@ -39,6 +39,7 @@ class VehicleUsageRequestRequest extends FormRequest
             'acceptor_id' => 'prohibited',
             'user_id' => 'prohibited',
             'ucategory_id' => 'prohibited',
+            'officer_id' => 'prohibited'
         ];
     }
 }

@@ -83,6 +83,7 @@ class VehicleUsagesController extends Controller
         $updateData->status = 'FINISHED';
         $updateData->arrival = Carbon::now();
         $updateData->distance_count_in = $request->input('distance_count_in');
+        $updateData->officer_id = JWTAuth::user()->user_id;
         if ($updateData->update()) {
             return response()->json(['status' => 'Update success'], 200); 
         }

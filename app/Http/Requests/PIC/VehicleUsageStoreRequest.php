@@ -39,6 +39,7 @@ class VehicleUsageStoreRequest extends FormRequest
             'acceptor_id' => 'required',
             'user_id' => 'required|exists:users',
             'ucategory_id' => 'required|exists:usage_categories',
+            'officer_id' => 'prohibited'
         ];
     }
 }
