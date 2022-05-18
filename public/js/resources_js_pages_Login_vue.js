@@ -123,73 +123,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
     return {
       isError: false,
       errorMessage: "",
+      bgImage: "/assets/img/office-dark.jpg",
       model: {
         email: "",
         password: ""
@@ -313,10 +253,7 @@ var render = function () {
       "div",
       {
         staticClass: "page-header align-items-start min-vh-100",
-        staticStyle: {
-          "background-image":
-            "url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80')",
-        },
+        staticStyle: { "background-image": "url('images/polman-bandung.png')" },
       },
       [
         _c("span", { staticClass: "mask bg-gradient-dark opacity-6" }),
@@ -355,6 +292,12 @@ var render = function () {
                   _vm._m(1),
                   _vm._v(" "),
                   _c("div", { staticClass: "card-body" }, [
+                    _c("p", { staticClass: "text-center" }, [
+                      _vm._v(
+                        "\n                                Silakan login untuk melanjutkan\n                            "
+                      ),
+                    ]),
+                    _vm._v(" "),
                     _c(
                       "form",
                       { staticClass: "text-start", attrs: { role: "form" } },
@@ -442,7 +385,7 @@ var render = function () {
                             "button",
                             {
                               staticClass:
-                                "btn bg-gradient-primary w-100 my-4 mb-2",
+                                "btn bg-gradient-info w-100 my-4 mb-2",
                               on: {
                                 click: function ($event) {
                                   $event.preventDefault()
@@ -457,8 +400,6 @@ var render = function () {
                             ]
                           ),
                         ]),
-                        _vm._v(" "),
-                        _vm._m(3),
                       ]
                     ),
                   ]),
@@ -468,7 +409,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(4),
+        _vm._m(3),
       ]
     ),
   ])
@@ -503,7 +444,7 @@ var staticRenderFns = [
           "div",
           {
             staticClass:
-              "bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1",
+              "bg-gradient-info shadow-info border-radius-lg py-3 pe-1",
           },
           [
             _c(
@@ -514,7 +455,7 @@ var staticRenderFns = [
               },
               [
                 _vm._v(
-                  "\n                                    Sign in\n                                "
+                  "\n                                    Sistem Layanan Kendaraan Dinas\n                                    (Silakend)\n                                "
                 ),
               ]
             ),
@@ -542,28 +483,10 @@ var staticRenderFns = [
             staticClass: "form-check-label mb-0 ms-2",
             attrs: { for: "rememberMe" },
           },
-          [_vm._v("Remember me")]
+          [_vm._v("Ingat saya")]
         ),
       ]
     )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "mt-4 text-sm text-center" }, [
-      _vm._v(
-        "\n                                    Don't have an account?\n                                    "
-      ),
-      _c(
-        "a",
-        {
-          staticClass: "text-primary text-gradient font-weight-bold",
-          attrs: { href: "../pages/sign-up.html" },
-        },
-        [_vm._v("Sign up")]
-      ),
-    ])
   },
   function () {
     var _vm = this
@@ -576,109 +499,19 @@ var staticRenderFns = [
         _c("div", { staticClass: "container" }, [
           _c(
             "div",
-            {
-              staticClass: "row align-items-center justify-content-lg-between",
-            },
+            { staticClass: "row align-items-center justify-content-lg" },
             [
-              _c("div", { staticClass: "col-12 col-md-6 my-auto" }, [
+              _c("div", { staticClass: "col-12 col-md-12 my-auto" }, [
                 _c(
                   "div",
                   {
                     staticClass:
-                      "copyright text-center text-sm text-white text-lg-start",
+                      "copyright text-center text-sm text-white text-lg",
                   },
                   [
                     _vm._v(
-                      "\n                            made with\n                            "
+                      "\n                            Copyright Polman Bandung © 2022\n                        "
                     ),
-                    _c("i", {
-                      staticClass: "fa fa-heart",
-                      attrs: { "aria-hidden": "true" },
-                    }),
-                    _vm._v(
-                      "\n                            by\n                            "
-                    ),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "font-weight-bold text-white",
-                        attrs: {
-                          href: "https://www.creative-tim.com",
-                          target: "_blank",
-                        },
-                      },
-                      [_vm._v("Creative Tim")]
-                    ),
-                    _vm._v(
-                      "\n                            for a better web.\n                        "
-                    ),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-6" }, [
-                _c(
-                  "ul",
-                  {
-                    staticClass:
-                      "nav nav-footer justify-content-center justify-content-lg-end",
-                  },
-                  [
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link text-white",
-                          attrs: {
-                            href: "https://www.creative-tim.com",
-                            target: "_blank",
-                          },
-                        },
-                        [_vm._v("Creative Tim")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link text-white",
-                          attrs: {
-                            href: "https://www.creative-tim.com/presentation",
-                            target: "_blank",
-                          },
-                        },
-                        [_vm._v("About Us")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link text-white",
-                          attrs: {
-                            href: "https://www.creative-tim.com/blog",
-                            target: "_blank",
-                          },
-                        },
-                        [_vm._v("Blog")]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "nav-item" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "nav-link pe-0 text-white",
-                          attrs: {
-                            href: "https://www.creative-tim.com/license",
-                            target: "_blank",
-                          },
-                        },
-                        [_vm._v("License")]
-                      ),
-                    ]),
                   ]
                 ),
               ]),

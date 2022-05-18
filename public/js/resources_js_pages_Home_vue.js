@@ -1035,6 +1035,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     var _ref, _ref2;
@@ -1866,11 +1885,11 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute",
+                  "icon icon-md icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute",
               },
               [
                 _c("i", { staticClass: "material-icons opacity-10" }, [
-                  _vm._v("weekend"),
+                  _vm._v("directions_car"),
                 ]),
               ]
             ),
@@ -1878,11 +1897,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "text-end pt-1" }, [
               _c("p", { staticClass: "text-sm mb-0 text-capitalize" }, [
                 _vm._v(
-                  "\n                            Today's Money\n                        "
+                  "\n                            Penggunaan Kendaraan\n                        "
                 ),
               ]),
               _vm._v(" "),
-              _c("h4", { staticClass: "mb-0" }, [_vm._v("$53k")]),
+              _c("h4", { staticClass: "mb-0" }, [_vm._v("1,234")]),
+              _vm._v(
+                "\n                        /Bulan ini\n                    "
+              ),
             ]),
           ]),
           _vm._v(" "),
@@ -1895,7 +1917,7 @@ var staticRenderFns = [
                 { staticClass: "text-success text-sm font-weight-bolder" },
                 [_vm._v("+55% ")]
               ),
-              _vm._v("than lask week\n                    "),
+              _vm._v("dari bulan lalu\n                    "),
             ]),
           ]),
         ]),
@@ -1908,11 +1930,11 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute",
+                  "icon icon-md icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute",
               },
               [
                 _c("i", { staticClass: "material-icons opacity-10" }, [
-                  _vm._v("person"),
+                  _vm._v("directions_car"),
                 ]),
               ]
             ),
@@ -1920,11 +1942,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "text-end pt-1" }, [
               _c("p", { staticClass: "text-sm mb-0 text-capitalize" }, [
                 _vm._v(
-                  "\n                            Today's Users\n                        "
+                  "\n                            Penggunaan Kendaraan\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("h4", { staticClass: "mb-0" }, [_vm._v("2,300")]),
+              _vm._v(
+                "\n                        /Tahun ini\n                    "
+              ),
             ]),
           ]),
           _vm._v(" "),
@@ -1937,7 +1962,7 @@ var staticRenderFns = [
                 { staticClass: "text-success text-sm font-weight-bolder" },
                 [_vm._v("+3% ")]
               ),
-              _vm._v("than lask month\n                    "),
+              _vm._v("dari tahun lalu\n                    "),
             ]),
           ]),
         ]),
@@ -1950,11 +1975,11 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute",
+                  "icon icon-md icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute",
               },
               [
                 _c("i", { staticClass: "material-icons opacity-10" }, [
-                  _vm._v("person"),
+                  _vm._v("build"),
                 ]),
               ]
             ),
@@ -1962,11 +1987,14 @@ var staticRenderFns = [
             _c("div", { staticClass: "text-end pt-1" }, [
               _c("p", { staticClass: "text-sm mb-0 text-capitalize" }, [
                 _vm._v(
-                  "\n                            New Clients\n                        "
+                  "\n                            Perbaikan Kendaraan\n                        "
                 ),
               ]),
               _vm._v(" "),
               _c("h4", { staticClass: "mb-0" }, [_vm._v("3,462")]),
+              _vm._v(
+                "\n                        /Bulan ini\n                    "
+              ),
             ]),
           ]),
           _vm._v(" "),
@@ -1980,7 +2008,7 @@ var staticRenderFns = [
                 [_vm._v("-2%")]
               ),
               _vm._v(
-                "\n                        than yesterday\n                    "
+                "\n                        dari bulan lalu\n                    "
               ),
             ]),
           ]),
@@ -1994,21 +2022,26 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute",
+                  "icon icon-md icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute",
               },
               [
                 _c("i", { staticClass: "material-icons opacity-10" }, [
-                  _vm._v("weekend"),
+                  _vm._v("build"),
                 ]),
               ]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "text-end pt-1" }, [
               _c("p", { staticClass: "text-sm mb-0 text-capitalize" }, [
-                _vm._v("Sales"),
+                _vm._v(
+                  "\n                            Perbaikan Kendaraan\n                        "
+                ),
               ]),
               _vm._v(" "),
-              _c("h4", { staticClass: "mb-0" }, [_vm._v("$103,430")]),
+              _c("h4", { staticClass: "mb-0" }, [_vm._v("103,430")]),
+              _vm._v(
+                "\n                        /Tahun ini\n                    "
+              ),
             ]),
           ]),
           _vm._v(" "),
@@ -2021,7 +2054,7 @@ var staticRenderFns = [
                 { staticClass: "text-success text-sm font-weight-bolder" },
                 [_vm._v("+5% ")]
               ),
-              _vm._v("than yesterday\n                    "),
+              _vm._v("dari tahun lalu\n                    "),
             ]),
           ]),
         ]),
@@ -2061,10 +2094,14 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Website Views")]),
+            _c("h6", { staticClass: "mb-0" }, [
+              _vm._v("Jumlah Penggunaan Per Kendaraan"),
+            ]),
             _vm._v(" "),
             _c("p", { staticClass: "text-sm" }, [
-              _vm._v("Last Campaign Performance"),
+              _vm._v(
+                "\n                        Jumlah penggunaan tiap kendaraan tahun ini\n                    "
+              ),
             ]),
             _vm._v(" "),
             _c("hr", { staticClass: "dark horizontal" }),
@@ -2075,7 +2112,9 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "mb-0 text-sm" }, [
-                _vm._v("campaign sent 2 days ago"),
+                _vm._v(
+                  "\n                            terakhir update 1 jam yang lalu\n                        "
+                ),
               ]),
             ]),
           ]),
@@ -2110,15 +2149,13 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Daily Sales")]),
+            _c("h6", { staticClass: "mb-0" }, [
+              _vm._v("Jumlah Penggunaan Per Supir"),
+            ]),
             _vm._v(" "),
             _c("p", { staticClass: "text-sm" }, [
-              _vm._v("\n                        ("),
-              _c("span", { staticClass: "font-weight-bolder" }, [
-                _vm._v("+15%"),
-              ]),
               _vm._v(
-                ")\n                        increase in today sales.\n                    "
+                "\n                        Jumlah penggunaan tiap supir tahun ini\n                    "
               ),
             ]),
             _vm._v(" "),
@@ -2130,7 +2167,9 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "mb-0 text-sm" }, [
-                _vm._v("updated 4 min ago"),
+                _vm._v(
+                  "\n                            terakhir update 1 jam yang lalu\n                        "
+                ),
               ]),
             ]),
           ]),
@@ -2165,10 +2204,14 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Completed Tasks")]),
+            _c("h6", { staticClass: "mb-0" }, [
+              _vm._v("Jumlah Penggunaan Per Unit Kerja"),
+            ]),
             _vm._v(" "),
             _c("p", { staticClass: "text-sm" }, [
-              _vm._v("Last Campaign Performance"),
+              _vm._v(
+                "\n                        Jumlah penggunaan tiap unit kerja tahun ini\n                    "
+              ),
             ]),
             _vm._v(" "),
             _c("hr", { staticClass: "dark horizontal" }),
@@ -2179,7 +2222,9 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "mb-0 text-sm" }, [
-                _vm._v("just updated"),
+                _vm._v(
+                  "\n                            terakhir update 1 jam yang lalu\n                        "
+                ),
               ]),
             ]),
           ]),
